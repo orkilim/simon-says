@@ -135,14 +135,14 @@ const Game = ({navigation}) => {
     }
 
     const shouldShow = () => {
-        console.log("showFlag: ",showFlag)
+        
         if (showFlag) {
             dispatch(changeTextStyle({ display: "none" }))
             dispatch(showButton({}))
             showFlag=false
         }
         else {
-            console.log("moo")
+            
             dispatch(changeTextStyle({ color: "white", fontSize: 20 }))
             dispatch(showButton({
                 justifyContent: "center",
@@ -162,7 +162,7 @@ const Game = ({navigation}) => {
                 <Text style={styles.text} >{"\n"} It's {playing} turn</Text>
                 <TouchableOpacity style={show} onPress={() => {
                     
-                    console.log("hey")
+                    
                     shouldShow()
                     dispatch(pressedButton(true))
                 }} >
